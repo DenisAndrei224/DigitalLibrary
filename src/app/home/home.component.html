@@ -1,1 +1,40 @@
-<p>home works!</p>
+<div class="container">
+  <h2>Welcome to {{ title }}!</h2>
+  <p>
+    Here you can find all the books and materials you need. Find out the best
+    books and resources you can think of. Readers, podcast listeners and all
+    bookworms could find a resting place where they can learn with a simple
+    click.
+  </p>
+
+  <mat-card class="example-card">
+    <div class="book-title">
+      <h3>Featured Books</h3>
+      <p>Explore our collection</p>
+    </div>
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+    </mat-card-header>
+    <div class="book-container">
+      <img mat-card-image class="book-image" src="assets/book1.jpg" />
+      <img mat-card-image class="book-image" src="assets/book2.jpg" />
+      <img mat-card-image class="book-image" src="assets/book3.jpg" />
+      <img mat-card-image class="book-image" src="assets/book4.jpg" />
+      <img mat-card-image class="book-image" src="assets/book5.jpg" />
+      <img mat-card-image class="book-image" src="assets/book6.jpg" />
+    </div>
+    <mat-card-content>
+      <p>Discover our latest arrivals and bestsellers.</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button routerLink="/library">View Collection</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2024 Digital Library. All rights reserved.</p>
+    <p><a href="/about">About</a> | <a href="#">Contact Us</a></p>
+  </div>
+</footer>
