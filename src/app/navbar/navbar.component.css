@@ -1,3 +1,13 @@
 .spacer {
   flex: 1 1 auto;
 }
+
+.nav-links a {
+  transition: box-shadow 0.3s; /* Add transition for smooth effect */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
+}
+
+.nav-links a:hover {
+  background-color: #032f87; /* Change the background color on hover */
+  box-shadow: 0 4px 8px rgba(33, 31, 31, 0.6); /* Change the shadow color on hover */
+}
