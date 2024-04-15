@@ -1,1 +1,42 @@
-<p>library works!</p>
+<div class="container">
+  <div class="library-header">
+    <h2>Library</h2>
+  </div>
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Title Column -->
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
+      <mat-cell *matCellDef="let book" class="mat-column-title">
+        {{ book.title.value }}</mat-cell
+      >
+    </ng-container>
+
+    <!-- Author Column -->
+    <ng-container matColumnDef="authorName">
+      <mat-header-cell *matHeaderCellDef>Author</mat-header-cell>
+      <mat-cell *matCellDef="let book" class="mat-column-authorName">
+        {{ book.authorName.value }}</mat-cell
+      >
+    </ng-container>
+
+    <!-- Description Column -->
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+      <mat-cell *matCellDef="let book" class="mat-column-description">
+        {{ book.description.value }}</mat-cell
+      >
+    </ng-container>
+
+    <ng-container matColumnDef="rent">
+      <mat-header-cell *matHeaderCellDef>Rent</mat-header-cell>
+      <mat-cell *matCellDef="let book" class="mat-column-rent">
+        <button mat-raised-button color="primary" (click)="rentBook(book)">
+          Rent Book
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+</div>

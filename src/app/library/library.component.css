@@ -1,0 +1,10 @@
+.library-header {
+  margin: 20px;
+}
+
+.mat-column-title,
+.mat-column-authorName,
+.mat-column-description,
+.mat-column-rent {
+  width: 10%; /* Adjust the width of each column as needed */
+}

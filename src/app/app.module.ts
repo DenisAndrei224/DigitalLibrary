@@ -4,6 +4,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCard, MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,6 +36,9 @@ import { SignupComponent } from './signup/signup.component';
     MatButtonModule,
     MatIconModule,
     MatCardModule,
+    HttpClientModule,
+    FormsModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
