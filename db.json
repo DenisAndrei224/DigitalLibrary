@@ -30,5 +30,19 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "users": [
+    {
+      "username": "test123",
+      "password": "password",
+      "id": 1
+    }
+  ],
+  "authenticate": [
+    {
+      "username": "test123",
+      "password": "password",
+      "id": 1
+    }
+  ]
 }
