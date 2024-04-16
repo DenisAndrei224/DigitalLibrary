@@ -1,0 +1,12 @@
+.container {
+  max-width: 400px;
+  margin: auto;
+}
+
+.form-row {
+  margin-bottom: 16px; /* Adjust the margin between form fields */
+}
+
+.full-width {
+  width: 100%;
+}
