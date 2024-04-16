@@ -1,1 +1,26 @@
-<p>signup works!</p>
+<div class="container">
+  <h2>Sign Up</h2>
+  <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
+    <mat-form-field>
+      <input matInput placeholder="Username" name="username" ngModel required />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        type="password"
+        placeholder="Password"
+        name="password"
+        ngModel
+        required
+      />
+    </mat-form-field>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="!signupForm.valid"
+    >
+      Sign Up
+    </button>
+  </form>
+</div>
