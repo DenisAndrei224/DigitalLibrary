@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SparqlService } from '../sparql.service';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-library',
@@ -7,8 +8,8 @@ import { SparqlService } from '../sparql.service';
   styleUrls: ['./library.component.css'],
 })
 export class LibraryComponent implements OnInit {
-  displayedColumns: string[] = ['title', 'authorName', 'description'];
-  dataSource: any[] = [];
+  displayedColumns: string[] = ['title', 'authorName', 'description', 'action'];
+  dataSource!: MatTableDataSource<any>;
 
   constructor(private sparqlService: SparqlService) {}
 
@@ -30,6 +31,7 @@ export class LibraryComponent implements OnInit {
   rentBook(book: any): void {
     // Implement rent functionality here
     console.log('Renting book:', book);
+    alert('Rented book ' + book.title.value + ' by ' + book.authorName.value);
     // You can call a service method here to handle the rent operation
   }
 }

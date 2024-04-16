@@ -27,10 +27,15 @@
       >
     </ng-container>
 
-    <ng-container matColumnDef="rent">
-      <mat-header-cell *matHeaderCellDef>Rent</mat-header-cell>
+    <ng-container matColumnDef="action">
+      <mat-header-cell *matHeaderCellDef></mat-header-cell>
       <mat-cell *matCellDef="let book" class="mat-column-rent">
-        <button mat-raised-button color="primary" (click)="rentBook(book)">
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="rentBook(book)"
+          class="rent-button"
+        >
           Rent Book
         </button>
       </mat-cell>

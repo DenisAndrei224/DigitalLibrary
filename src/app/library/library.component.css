@@ -8,3 +8,7 @@
 .mat-column-rent {
   width: 10%; /* Adjust the width of each column as needed */
 }
+
+.rent-button {
+  margin-left: 6em;
+}
