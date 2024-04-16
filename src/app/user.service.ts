@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
   private baseUrl = 'http://localhost:3000';
+  private loggedIn = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient) {}
 
@@ -33,12 +34,19 @@ export class UserService {
           (user) => user.username === username && user.password === password
         );
         if (authenticatedUser) {
+          this.loggedIn.next(true);
           observer.next(authenticatedUser);
         } else {
           observer.error('Invalid username or password');
+          this.loggedIn.next(false);
+          observer.next(false);
         }
         observer.complete();
       });
     });
+  }
+
+  isLoggedIn(): Observable<boolean> {
+    return this.loggedIn.asObservable();
   }
 }
