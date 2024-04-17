@@ -28,4 +28,9 @@ export class LoginComponent implements OnInit {
       }
     );
   }
+
+  logout(): void {
+    this.userService.logout(); // Call the logout method from UserService
+    this.router.navigate(['/login']); // Navigate to the login page after logout
+  }
 }
