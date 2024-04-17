@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SparqlService } from '../sparql.service';
 import { MatTableDataSource } from '@angular/material/table';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-library',
@@ -10,11 +11,16 @@ import { MatTableDataSource } from '@angular/material/table';
 export class LibraryComponent implements OnInit {
   displayedColumns: string[] = ['title', 'authorName', 'description', 'action'];
   dataSource!: MatTableDataSource<any>;
+  isLoggedIn: boolean = false;
 
-  constructor(private sparqlService: SparqlService) {}
+  constructor(
+    private sparqlService: SparqlService,
+    private userService: UserService
+  ) {}
 
   ngOnInit(): void {
     this.getAllBooks();
+    this.checkAuthenticationStatus();
   }
 
   getAllBooks(): void {
@@ -28,10 +34,20 @@ export class LibraryComponent implements OnInit {
     );
   }
 
+  checkAuthenticationStatus(): void {
+    this.userService.isLoggedIn().subscribe((loggedIn) => {
+      this.isLoggedIn = loggedIn;
+    });
+  }
+
   rentBook(book: any): void {
     // Implement rent functionality here
-    console.log('Renting book:', book);
-    alert('Rented book ' + book.title.value + ' by ' + book.authorName.value);
-    // You can call a service method here to handle the rent operation
+    if (this.isLoggedIn) {
+      console.log('Renting book:', book);
+      alert('Rented book ' + book.title.value + ' by ' + book.authorName.value);
+      // You can call a service method here to handle the rent operation
+    } else {
+      alert('Please login to rent books.');
+    }
   }
 }
