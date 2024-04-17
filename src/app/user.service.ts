@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -48,5 +48,19 @@ export class UserService {
 
   isLoggedIn(): Observable<boolean> {
     return this.loggedIn.asObservable();
+  }
+
+  getUsername(): Observable<string> {
+    // Assuming authenticated user is stored somewhere or retrieved from server
+    // Here we will assume it's the first user in the list
+    return this.getUsers().pipe(
+      map((users) => {
+        if (users.length > 0) {
+          return users[0].username; // Return the username of the first user
+        } else {
+          return ''; // Return empty string if no users found
+        }
+      })
+    );
   }
 }
