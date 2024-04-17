@@ -10,6 +10,11 @@
     <a mat-button routerLink="/about">About</a>
     <a mat-button routerLink="/library">Library</a>
     <a mat-button routerLink="/mybooks">My Books</a>
-    <a mat-raised-button color="accent" routerLink="/login">Login</a>
+    <a mat-raised-button *ngIf="!isLoggedIn" color="accent" routerLink="/login"
+      >Login</a
+    >
+    <ng-container *ngIf="isLoggedIn">
+      <span>Hello, {{ username }}</span>
+    </ng-container>
   </div>
 </mat-toolbar>
