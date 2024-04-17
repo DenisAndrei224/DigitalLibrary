@@ -8,8 +8,16 @@ import { BehaviorSubject, Observable, map } from 'rxjs';
 export class UserService {
   private baseUrl = 'http://localhost:3000';
   private loggedIn = new BehaviorSubject<boolean>(false);
+  private loggedInKey = 'isLoggedIn';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.loggedIn.next(this.isLoggedInInLocalStorage());
+  }
+
+  private isLoggedInInLocalStorage(): boolean {
+    const loggedInState = localStorage.getItem(this.loggedInKey);
+    return loggedInState ? JSON.parse(loggedInState) : false;
+  }
 
   getUsers(): Observable<any[]> {
     return this.http.get<any[]>(`${this.baseUrl}/users`);
@@ -35,10 +43,12 @@ export class UserService {
         );
         if (authenticatedUser) {
           this.loggedIn.next(true);
+          localStorage.setItem(this.loggedInKey, 'true');
           observer.next(authenticatedUser);
         } else {
           observer.error('Invalid username or password');
           this.loggedIn.next(false);
+          localStorage.setItem(this.loggedInKey, 'false');
           observer.next(false);
         }
         observer.complete();
@@ -62,5 +72,10 @@ export class UserService {
         }
       })
     );
+  }
+
+  logout(): void {
+    this.loggedIn.next(false); // Clear the loggedIn state
+    localStorage.removeItem(this.loggedInKey); // Remove the loggedIn state from localStorage
   }
 }
