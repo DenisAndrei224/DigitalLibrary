@@ -1,0 +1,747 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library/"
+     xml:base="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:digital-library="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#hasAuthor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Book"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#hasFormat -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#hasFormat"/>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#hasGenre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#hasGenre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Book"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Genre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#isPartOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#isSimilarTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#isSimilarTo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#references -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#references"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#date">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"></rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#description">
+        <rdfs:comment xml:lang="en">The description of the book</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#format -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#format">
+        <rdfs:comment></rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#hasName"/>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#hasTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#hasTitle"/>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#language -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#language">
+        <rdfs:comment xml:lang="en">The language in which the book/article/resource has been written.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Application -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Application">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#ArtCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#ArtCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#SubjectCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Article -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Article">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#TextResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#AudioResource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#AudioResource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#DigitalResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Audiobook -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Audiobook">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#AudioResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Author -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Author">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#DigitalLibrary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Book -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Book">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#TextResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Collection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Collection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#DigitalLibrary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#DataFile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#DataFile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Dataset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Database -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Database">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Dataset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Dataset -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Dataset">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#DigitalResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Diagram -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Diagram">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#ImageResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#DigitalLibrary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#DigitalLibrary"/>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#DigitalResource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#DigitalResource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#DigitalLibrary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Documentary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Documentary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#VideoResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#DocumentaryCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#DocumentaryCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#GenreCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#EPUBCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#EPUBCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#FormatCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#EducationalCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#EducationalCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#GenreCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#EnglishCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#EnglishCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#LanguageCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Essay -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Essay">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#TextResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#FictionCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#FictionCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#GenreCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#FormatCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#FormatCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Collection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#FrenchCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#FrenchCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#LanguageCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Genre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#DigitalLibrary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#GenreCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#GenreCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Collection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#GermanCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#GermanCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#LanguageCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Graphic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Graphic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#ImageResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#HTMLCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#HTMLCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#FormatCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#HistoryCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#HistoryCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#SubjectCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Illustration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Illustration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#ImageResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#ImageResource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#ImageResource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#DigitalResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#LanguageCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#LanguageCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Collection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Lecture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Lecture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#VideoResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#LiteratureCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#LiteratureCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#SubjectCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#MP3Collection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#MP3Collection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#FormatCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Movie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Movie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#VideoResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#MusicTrack -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#MusicTrack">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#AudioResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#NonFictionCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#NonFictionCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#GenreCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#PDFCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#PDFCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#FormatCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Photograph -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Photograph">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#ImageResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Podcast -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Podcast">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#AudioResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Report -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Report">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#TextResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#RomanianCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#RomanianCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#LanguageCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#ScienceCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#ScienceCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#SubjectCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Software -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Software">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#DigitalResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Speech -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Speech">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#AudioResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Spreadsheet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Spreadsheet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Dataset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#SubjectCollection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#SubjectCollection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Collection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#TextResource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#TextResource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#DigitalResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Thesis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Thesis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#TextResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Tool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Tool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Tutorial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Tutorial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#VideoResource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#VideoResource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#VideoResource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#DigitalResource"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Anna_Karenina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Anna_Karenina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Book"/>
+        <digital-library:hasAuthor rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#tolstoy"/>
+        <digital-library:hasGenre rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#action"/>
+        <digital-library:description>Anna Karenina is a novel by the Russian author Lev Tolstoy, first published in book form in 1878. The novel deals with themes of betrayal, faith, family, marriage, Imperial Russian society, desire, and the differences between rural and urban life. The story centers on an extramarital affair between Anna and cavalry officer Count Alexei Kirillovich Vronsky that scandalizes the social circles of Saint Petersburg and forces the young lovers to flee to Italy in a search for happiness, but after they return to Russia, their lives further unravel.</digital-library:description>
+        <digital-library:hasTitle>Anna Karenina</digital-library:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Crime_and_Punishment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Crime_and_Punishment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Book"/>
+        <digital-library:hasAuthor rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#dostoevsky"/>
+        <digital-library:hasGenre rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#action"/>
+        <digital-library:description>Crime and Punishment follows the mental anguish and moral dilemmas of Rodion Raskolnikov, an impoverished ex-student in Saint Petersburg who plans to kill an unscrupulous pawnbroker, an old woman who stores money and valuable objects in her flat. He theorises that with the money he could liberate himself from poverty and go on to perform great deeds, and seeks to convince himself that certain crimes are justifiable if they are committed in order to remove obstacles to the higher goals of &apos;extraordinary&apos; men. Once the deed is done, however, he finds himself wracked with confusion, paranoia, and disgust. His theoretical justifications lose all their power as he struggles with guilt and horror and is confronted with both internal and external consequences of his deed.</digital-library:description>
+        <digital-library:hasTitle>Crime and Punishment</digital-library:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#The_Brothers_Karamazov -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#The_Brothers_Karamazov">
+        <rdf:type rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Book"/>
+        <digital-library:hasAuthor rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#dostoevsky"/>
+        <digital-library:hasGenre rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#philosophic"/>
+        <digital-library:description>Set in 19th-century Russia, The Brothers Karamazov is a passionate philosophical novel that discusses questions of God, free will, and morality. It has also been described as a theological drama dealing with problems of faith, doubt, and reason in the context of a modernizing Russia, with a plot that revolves around the subject of patricide. Dostoevsky composed much of the novel in Staraya Russa, which inspired the main setting.</digital-library:description>
+        <digital-library:hasTitle>The Brothers Karamazov</digital-library:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#The_Captains_Daughter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#The_Captains_Daughter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Book"/>
+        <digital-library:hasAuthor rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#pushkin"/>
+        <digital-library:hasGenre rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#philosophic"/>
+        <digital-library:description>The Captain&apos;s Daughter is a historical novel by the Russian writer Alexander Pushkin. It was first published in 1836 in the fourth issue of the literary journal Sovremennik and is his only completed novel. The novel is a romanticized account of Pugachev&apos;s Rebellion in 1773–1774. The title &quot;The Captain&apos;s Daughter&quot; has also been used to refer to a collection of stories, one of which was the actual novel.</digital-library:description>
+        <digital-library:hasTitle>The Captain&apos;s Daughter</digital-library:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#The_Queen_of_Spades -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#The_Queen_of_Spades">
+        <rdf:type rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Book"/>
+        <digital-library:hasAuthor rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#pushkin"/>
+        <digital-library:hasGenre rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#poeme"/>
+        <digital-library:description>The Queen of Spades is a short story with supernatural elements by Alexander Pushkin, about human avarice. Written in autumn 1833 in Boldino, it was first published in the literary magazine Biblioteka dlya chteniya in March 1834.</digital-library:description>
+        <digital-library:hasTitle>The Queen of Spades</digital-library:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#War_and_Peace -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#War_and_Peace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Book"/>
+        <digital-library:hasAuthor rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#tolstoy"/>
+        <digital-library:hasGenre rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#poeme"/>
+        <digital-library:description>War and Peace is a literary work by Russian author Lev Tolstoy. Set during the Napoleonic Wars, the work mixes fictional narrative with chapters discussing history and philosophy. An early version was published serially beginning in 1865, after which the entire book was rewritten and published in 1869. It is regarded, with Anna Karenina, as Tolstoy&apos;s finest literary achievement and remains an internationally praised classic of world literature</digital-library:description>
+        <digital-library:hasTitle>War and Peace</digital-library:hasTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#action -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#action">
+        <rdf:type rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#adventure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#adventure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#dostoevsky -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#dostoevsky">
+        <rdf:type rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Author"/>
+        <digital-library:hasName>Fyodor Dostoevsky</digital-library:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#drama -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#drama">
+        <rdf:type rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#philosophic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#philosophic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#poeme -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#poeme">
+        <rdf:type rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#pushkin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#pushkin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Author"/>
+        <digital-library:hasName>Alexander Pushkin</digital-library:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#thriller -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#thriller">
+        <rdf:type rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Genre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#tolstoy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#tolstoy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Author"/>
+        <digital-library:hasName>Lev Tolstoy</digital-library:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Article"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Book"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Essay"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Report"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Thesis"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#AudioResource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Dataset"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#ImageResource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#Software"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#TextResource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/denis/ontologies/2024/3/digital-library#VideoResource"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
