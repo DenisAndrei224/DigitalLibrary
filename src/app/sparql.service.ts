@@ -33,7 +33,7 @@ export class SparqlService {
         ?book ex:hasAuthor ?author .
         ?author ex:hasName ?authorName .
         ?book ex:description ?description .
-        FILTER (regex(?title, "^${keyword}$", "i"))
+        FILTER (regex(?title, "${keyword}", "i"))
       }
     `;
     // return this.executeQuery(query);
