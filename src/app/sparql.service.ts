@@ -34,25 +34,28 @@ export class SparqlService {
         ?author ex:hasName ?authorName .
         ?book ex:description ?description .
         FILTER (
-          regex(?title, "${keyword}", "i") ||
-          regex(?authorName, "${keyword}", "i") ||
-          regex(?description, "${keyword}", "i")
+          regex(?title, "^${keyword}$", "i") // Change here to match the exact title
         )
       }
     `;
-    // return this.executeQuery(query);
     return this.executeQuery(query).pipe(
       map((response) => response.results.bindings)
     );
   }
 
   executeQuery(query: string): Observable<any> {
-    const headers = new HttpHeaders().set(
-      'Content-Type',
-      'application/x-www-form-urlencoded'
-    );
-    const params = new HttpParams().set('query', query);
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/x-www-form-urlencoded',
+      Accept: 'application/sparql-results+json',
+    });
 
-    return this.http.post<any>(this.fusekiEndPoint, params, { headers });
+    // Manually format the body to ensure correct encoding
+    const body = `query=${encodeURIComponent(query)}`;
+
+    console.log('Sending query:', query); // Logs the query to the console
+    console.log('Sending headers:', headers); // Logs the headers
+    console.log('Sending body:', body.toString()); // Logs the body
+
+    return this.http.post<any>(this.fusekiEndPoint, body, { headers });
   }
 }

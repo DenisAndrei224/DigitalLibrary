@@ -8,12 +8,17 @@
     <button mat-raised-button color="primary" type="submit">Search</button>
   </form>
 
-  <div class="search-results" *ngIf="books.length > 0">
+  <div *ngIf="books.length > 0">
     <h3>Results:</h3>
-    <mat-list>
-      <mat-list-item *ngFor="let book of books">
-        {{ book.title }} by {{ book.author }}
-      </mat-list-item>
-    </mat-list>
+    <div class="results-list">
+      <div *ngFor="let book of books" class="book-item">
+        <p><strong>Book Title:</strong> {{ book.title }}</p>
+        <p><strong>Author:</strong> {{ book.authorName }}</p>
+        <p><strong>Description:</strong> {{ book.description }}</p>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="books.length === 0 && searchQuery">
+    <p>No results found for "{{ searchQuery }}". Please try another search.</p>
   </div>
 </div>

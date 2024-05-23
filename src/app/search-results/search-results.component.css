@@ -1,0 +1,13 @@
+.book-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc; /* Light line below each entry for separation */
+}
+
+.book-item p {
+  margin: 5px 0; /* Space between each line */
+}
+
+.mat-list-item {
+  border: none; /* Remove borders from mat-list-item if any */
+}

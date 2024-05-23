@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { SparqlService } from '../sparql.service';
 
 @Component({
   selector: 'app-search-results',
@@ -7,22 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchResultsComponent {
   searchQuery: string = '';
-  books: { title: string; author: string }[] = [];
+  books: any[] = [];
 
-  constructor() {}
+  constructor(private sparqlService: SparqlService) {}
 
   onSearch() {
-    // For now, let's use a mock list of books
-    const allBooks = [
-      { title: 'Book One', author: 'Author A' },
-      { title: 'Book Two', author: 'Author B' },
-      { title: 'Another Book', author: 'Author A' },
-    ];
-
-    this.books = allBooks.filter(
-      (book) =>
-        book.title.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
-        book.author.toLowerCase().includes(this.searchQuery.toLowerCase())
-    );
+    if (this.searchQuery) {
+      this.sparqlService.searchBooks(this.searchQuery).subscribe({
+        next: (bindings: any[]) => {
+          this.books = bindings.map((binding) => ({
+            title: binding.title?.value,
+            authorName: binding.authorName?.value,
+            description: binding.description?.value,
+          }));
+        },
+        error: (error) => {
+          console.error('Error fetching books:', error);
+          this.books = []; // Clear books on error
+        },
+      });
+    } else {
+      console.log('Search query is empty');
+      this.books = []; // Clear books if search query is empty
+    }
   }
 }
