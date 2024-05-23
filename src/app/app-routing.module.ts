@@ -6,6 +6,7 @@ import { LibraryComponent } from './library/library.component';
 import { MybooksComponent } from './mybooks/mybooks.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'mybooks', component: MybooksComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'search', component: SearchResultsComponent },
 ];
 
 @NgModule({

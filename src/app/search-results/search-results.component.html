@@ -1,1 +1,19 @@
-<p>search-results works!</p>
+<div class="search-container">
+  <h2>Search Books</h2>
+  <form (ngSubmit)="onSearch()">
+    <mat-form-field appearance="fill">
+      <mat-label>Search</mat-label>
+      <input matInput [(ngModel)]="searchQuery" name="searchQuery" required />
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Search</button>
+  </form>
+
+  <div class="search-results" *ngIf="books.length > 0">
+    <h3>Results:</h3>
+    <mat-list>
+      <mat-list-item *ngFor="let book of books">
+        {{ book.title }} by {{ book.author }}
+      </mat-list-item>
+    </mat-list>
+  </div>
+</div>

@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCard, MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
+import { MatListModule } from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
@@ -45,6 +46,7 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     FormsModule,
     MatTableModule,
     MatInputModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
