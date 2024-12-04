@@ -28,6 +28,12 @@ export class UserService {
     return this.http.get<any>(url);
   }
 
+  // Signup method
+  signup(name: string, email: string, password: string): Observable<any> {
+    const user = { name, email, password };
+    return this.http.post<any>(`${this.baseUrl}/signup`, user);
+  }
+
   authenticateUser(username: string, password: string): Observable<any> {
     // return this.http.get<any[]>(
     //   `${this.baseUrl}?username=${username}&password=${password}`

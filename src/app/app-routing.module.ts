@@ -9,7 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'library', component: LibraryComponent },
